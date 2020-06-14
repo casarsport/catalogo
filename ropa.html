@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Casar Sport</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/ropa_css.css">
+
+
+	<script src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var botones=document.querySelectorAll("button");
+			for (var i =0;i<botones.length; i++) {
+				botones[i].addEventListener("click",ver_mas, false);
+			}
+
+			var detalles=document.querySelectorAll(".detalles");
+			for (var i = 0; i<detalles.length ;i++) {
+				$(detalles[i]).hide();
+			}
+
+			$("#cerrar").hide();
+
+			$("#cerrar").click(function() {
+				$(".detalles").each(function() {
+					$(this).hide();
+				});
+				$("#contenido").show();
+				$("header").css({
+					opacity : 1
+				});
+
+				$("#cerrar").hide();
+			});
+
+			$("#menu").click(function() {
+				$("#opciones").slideToggle(500)
+			});
+
+			$("#opciones").hide()
+
+			/*----------CATEGORIAS----*/
+			$("#prendas_sudaderas").hide();
+			$("#prendas_conjuntos").hide();
+			$("#prendas_caballeros").hide();
+
+			var opciones=document.querySelectorAll("li");
+			for (var i =0 ;  i<opciones.length; i++) {
+				opciones[i].addEventListener("click",cambiar_catalogo, false);
+			}
+		});
+
+
+		function cambiar_catalogo(e){
+			if (e.target==mallones) {
+				$("#prendas_mallones").show();
+				$("#prendas_sudaderas").hide();
+				$("#prendas_conjuntos").hide();
+				$("#prendas_caballeros").hide();
+
+			}else if (e.target==sudaderas) {
+				$("#prendas_mallones").hide();
+				$("#prendas_sudaderas").show();
+				$("#prendas_conjuntos").hide();
+				$("#prendas_caballeros").hide();
+
+			}else if (e.target==conjuntos) {
+				$("#prendas_mallones").hide();
+				$("#prendas_sudaderas").hide();
+				$("#prendas_conjuntos").show();
+				$("#prendas_caballeros").hide();
+
+			}else if (e.target==caballeros) {
+				$("#prendas_mallones").hide();
+				$("#prendas_sudaderas").hide();
+				$("#prendas_conjuntos").hide();
+				$("#prendas_caballeros").show();
+			}
+		}
+
+		function ver_mas(e){
+
+			$("#contenido").hide();
+			$("header").css({
+				opacity : 0.9
+			});
+
+			e.stopPropagation();
+			$("#cerrar").show();
+
+			if (e.target==Bmallon1) {
+				$("#detalles_mallon1").show();
+				$(".detalles .principal").attr("src","imagenes/mallon_costado_t.jpg");
+				$(".detalles .miniaturas .delantero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/mallon_costado_d.jpg");
+				});
+
+				$(".detalles .miniaturas .trasero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/mallon_costado_t.jpg");
+				});
+
+			}else if (e.target==Bmallon2) {
+				$("#detalles_mallon2").show();
+				$(".detalles .principal").attr("src","imagenes/mallon_french_t.jpg");
+				$(".detalles .miniaturas .delantero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/mallon_french_d.jpg");
+				});
+
+				$(".detalles .miniaturas .trasero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/mallon_french_t.jpg");
+				});
+			}else if (e.target==Bmallon3) {
+				$("#detalles_mallon3").show();
+				$(".detalles .principal").attr("src","imagenes/mallon_liso_t.jpg");
+				$(".detalles .miniaturas .delantero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/mallon_liso_d.jpg");
+				});
+
+				$(".detalles .miniaturas .trasero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/mallon_liso_t.jpg");
+				});
+			}else if (e.target==Bmallon4) {
+				$("#detalles_mallon4").show();
+				$(".detalles .principal").attr("src","imagenes/mallon_recto_t.jpg");
+				$(".detalles .miniaturas .delantero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/mallon_recto_d.jpg");
+				});
+
+				$(".detalles .miniaturas .trasero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/mallon_recto_t.jpg");
+				});
+			}else if (e.target==Bmallon5) {
+				$("#detalles_mallon5").show();
+				$(".detalles .principal").attr("src","imagenes/mallon_cartera_t.jpg");
+				$(".detalles .miniaturas .delantero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/mallon_cartera_d.jpg");
+				});
+
+				$(".detalles .miniaturas .trasero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/mallon_cartera_t.jpg");
+				});
+			}else if (e.target==Bmallon6) {
+				$("#detalles_mallon6").show();
+				$(".detalles .principal").attr("src","imagenes/capri_t.jpg");
+				$(".detalles .miniaturas .delantero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/capri_d.jpg");
+				});
+
+				$(".detalles .miniaturas .trasero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/capri_t.jpg");
+				});
+			}else if (e.target==Bsudadera1) {
+				$("#detalles_sudadera1").show();
+				$(".detalles .principal").attr("src","imagenes/sudadera_doble_d.jpg");
+				$(".detalles .miniaturas .delantero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/sudadera_doble_t.jpg");
+				});
+
+				$(".detalles .miniaturas .trasero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/sudadera_doble_d.jpg");
+				});
+			}else if (e.target==Bsudadera2) {
+				$("#detalles_sudadera2").show();
+				$(".detalles .principal").attr("src","imagenes/sudadera_corta_d.jpg");
+				$(".detalles .miniaturas .delantero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/sudadera_corta_t.jpg");
+				});
+
+				$(".detalles .miniaturas .trasero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/sudadera_corta_d.jpg");
+				});
+			}else if (e.target==Bsudadera3) {
+				$("#detalles_sudadera3").show();
+				$(".detalles .principal").attr("src","imagenes/sudadera_cazadora_d.jpg");
+				$(".detalles .miniaturas .delantero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/sudadera_cazadora_t.jpg");
+				});
+
+				$(".detalles .miniaturas .trasero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/sudadera_cazadora_d.jpg");
+				});
+			}else if (e.target==Bsudadera4) {
+				$("#detalles_sudadera4").show();
+				$(".detalles .principal").attr("src","imagenes/sudadera_beisbolera_d.jpg");
+				$(".detalles .miniaturas .delantero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/sudadera_beisbolera_t.jpg");
+				});
+
+				$(".detalles .miniaturas .trasero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/sudadera_beisbolera_d.jpg");
+				});
+			}else if (e.target==Bconjunto1) {
+				$("#detalles_conjunto1").show();
+				$(".detalles .principal").attr("src","imagenes/conjunto_bies_t.jpg");
+				$(".detalles .miniaturas .delantero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/conjunto_bies_t.jpg");
+				});
+
+				$(".detalles .miniaturas .trasero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/conjunto_bies_d.jpg");
+				});
+			}else if (e.target==Bconjunto2) {
+				$("#detalles_conjunto2").show();
+				$(".detalles .principal").attr("src","imagenes/conjunto_doble_t.jpg");
+				$(".detalles .miniaturas .delantero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/conjunto_doble_t.jpg");
+				});
+
+				$(".detalles .miniaturas .trasero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/conjunto_doble_d.jpg");
+				});
+			}else if (e.target==Bconjunto3) {
+				$("#detalles_conjunto3").show();
+				$(".detalles .principal").attr("src","imagenes/conjunto_capri1_t.jpg");
+				$(".detalles .miniaturas .delantero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/conjunto_capri1_t.jpg");
+				});
+
+				$(".detalles .miniaturas .trasero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/conjunto_capri1_d.jpg");
+				});
+			}else if (e.target==Bconjunto4) {
+				$("#detalles_conjunto4").show();
+				$(".detalles .principal").attr("src","imagenes/conjunto_capri2_d.jpg");
+				$(".detalles .miniaturas .delantero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/conjunto_capri2_t.jpg");
+				});
+
+				$(".detalles .miniaturas .trasero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/conjunto_capri2_d.jpg");
+				});
+			}else if (e.target==Bconjunto5) {
+				$("#detalles_conjunto5").show();
+				$(".detalles .principal").attr("src","imagenes/conjunto_short_d.jpg");
+				$(".detalles .miniaturas .delantero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/conjunto_short_t.jpg");
+				});
+
+				$(".detalles .miniaturas .trasero").click(function() {
+					$(".detalles .principal").attr("src","imagenes/conjunto_short_d.jpg");
+				});
+			}
+		}
+
+
+
+	</script>
+</head>
+<body>
+	<header>
+		<div id="redes">
+			<a href="https://www.facebook.com/"><img class="redes_sociales" src="imagenes/facebook.png"></a>
+			<a href="https://www.instagram.com/"><img class="redes_sociales" src="imagenes/instagram.png"></a>
+		</div>
+		
+	</header>
+
+	<div id="logo">
+		<center>
+			<a href="index_2.html"><img src="imagenes/logo.jpg"></a>
+		</center>
+	</div>
+
+
+
+	<div id="contenido">
+		<div id="menu">
+			<img src="imagenes/menu.png">
+		</div>
+
+		<div id="opciones">
+			<ul>
+				<li id="mallones">Mallones</li>
+				<li id="sudaderas">Sudaderas</li>
+				<li id="conjuntos">Conjuntos</li>
+				<li id="caballeros">Caballeros</li>
+			</ul>
+		</div>
+
+		<div id="prendas_mallones" class="categoria">
+			<div class="prenda">
+				<img src="imagenes/mallon_costado_t.jpg">
+				<div id="descripcion">
+					Mallon con Bolsas al Costado
+				</div>
+
+				<button id="Bmallon1">Ver...</button>
+			</div>
+			
+			<div class="prenda">
+					<img src="imagenes/mallon_french_t.jpg">
+					<div id="descripcion">
+						Mallón Olgado
+					</div>
+				<button id="Bmallon2">Ver...</button>
+			</div>
+
+			<div class="prenda">
+				<img src="imagenes/mallon_liso_t.jpg">
+				<div id="descripcion">
+					Mallón Liso
+				</div>
+
+				<button id="Bmallon3">Ver...</button>
+			</div>
+
+			<div class="prenda">
+				<img src="imagenes/mallon_recto_t.jpg">
+				<div id="descripcion">
+					Pantalón Recto
+				</div>
+
+				<button id="Bmallon4">Ver...</button>
+			</div>
+
+			<div class="prenda">
+				<img src="imagenes/mallon_cartera_t.jpg">
+				<div id="descripcion">
+					Mallón con simulación de bolsa de cartera.
+				</div>
+
+				<button id="Bmallon5">Ver...</button>
+			</div>
+
+			<div class="prenda">
+				<img src="imagenes/capri_t.jpg">
+				<div id="descripcion">
+					Capri de Licra
+				</div>
+
+				<button id="Bmallon6">Ver...</button>
+			</div>
+		</div>
+
+		<div id="prendas_sudaderas" class="categoria">
+			<div class="prenda">
+				<img src="imagenes/sudadera_doble_d.jpg">
+				<div id="descripcion">
+					Chamarra Simulación Doble Cierre
+				</div>
+				<button id="Bsudadera1">Ver...</button>
+			</div>
+
+			<div class="prenda">
+				<img src="imagenes/sudadera_corta_t.jpg">
+				<div id="descripcion">
+					Sudadera Corta de Felpa
+				</div>
+				<button id="Bsudadera2">Ver...</button>
+			</div>
+
+			<div class="prenda">
+				<img src="imagenes/sudadera_cazadora_d.jpg">
+				<div id="descripcion">
+					Sudadera Tipo Cazadora
+				</div>
+				<button id="Bsudadera3">Ver...</button>
+			</div>
+
+			<div class="prenda">
+				<img src="imagenes/sudadera_beisbolera_d.jpg">
+				<div id="descripcion">
+					Sudadera Beisbolera
+				</div>
+				<button id="Bsudadera4">Ver...</button>
+			</div>
+		</div>
+
+		<div id="prendas_conjuntos" class="categoria">
+			<div class="prenda">
+				<img src="imagenes/conjunto_bies_t.jpg">
+				<div id="descripcion">
+					Conjunto de Bies
+				</div>
+				<button id="Bconjunto1">Ver...</button>
+			</div>
+
+			<div class="prenda">
+				<img src="imagenes/conjunto_doble_t.jpg">
+				<div id="descripcion">
+					Conjunto Simulación Doble Cierra
+				</div>
+				<button id="Bconjunto2">Ver...</button>
+			</div>
+
+			<div class="prenda">
+				<img src="imagenes/conjunto_capri1_t.jpg">
+				<div id="descripcion">
+					Conjunto De Capri
+				</div>
+				<button id="Bconjunto3">Ver...</button>
+			</div>
+			
+			<div class="prenda">
+				<img src="imagenes/conjunto_capri2_t.jpg">
+				<div id="descripcion">
+					Conjunto De Capri
+				</div>
+				<button id="Bconjunto4">Ver...</button>
+			</div>
+
+
+			<div class="prenda">
+				<img src="imagenes/conjunto_short_t.jpg">
+				<div id="descripcion">
+					Conjunto De Short
+				</div>
+				<button id="Bconjunto5">Ver...</button>
+			</div>
+		</div>
+
+		<div id="prendas_caballeros" class="categoria">
+			
+		</div>
+		
+	</div>
+
+
+	<div id="cerrar">
+		<img src="imagenes/cerrar.png">
+	</div>
+
+	<div id="detalles_mallon1" class="detalles">
+		<img src="imagenes/mallon_costado_t.jpg" class="principal">
+		
+		<div class="miniaturas">
+			<img src="imagenes/mallon_costado_t.jpg" class="trasero">
+			<img src="imagenes/mallon_costado_d.jpg" class="delantero">
+		</div>
+
+		<div class="informacion_prenda">
+			<span class="titulo">Mallón de Licra con Bolsas al Costado</span>
+			<table class="tallas">
+				<caption>Tallas</caption>
+				<tr>
+					<td>Ch</td>
+					<td>M</td>
+					<td>G</td>
+					<td>Ex</td>
+				</tr>
+			</table>
+
+			<table class="colores">
+				<caption>Colores</caption>
+				<tr>
+					<td style="background-color: #07480F"> </td>
+					<td style="background-color: #9E1F37"></td>
+					<td style="background-color: black"></td>
+					<td style="background-color: #D51148"></td>
+					<td style="background-color: #08043E"></td>
+					<td style="background-color: #BA0E0E"></td>
+					<td style="background-color: #0A0A66"></td>
+					<td style="background-color: #CAC5C5"></td>
+				</tr>
+			</table>
+
+			<table class="descripcion">
+				<caption>Descripción</caption>
+				<tr>
+					<td>Mayon de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="detalles_mallon2" class="detalles">
+		<img src="imagenes/mallon_french_t.jpg" class="principal">
+		
+		<div class="miniaturas">
+			<img src="imagenes/mallon_french_t.jpg" class="trasero">
+			<img src="imagenes/mallon_french_d.jpg" class="delantero">
+		</div>
+
+		<div class="informacion_prenda">
+			<span class="titulo">Mallón Olgado de French Terry</span>
+			<table class="tallas">
+				<caption>Tallas</caption>
+				<tr>
+					<td>Ch</td>
+					<td>M</td>
+					<td>G</td>
+					<td>Ex</td>
+				</tr>
+			</table>
+
+			<table class="colores">
+				<caption>Colores</caption>
+				<tr>
+					<td style="background-color: #07480F"> </td>
+					<td style="background-color: #9E1F37"></td>
+					<td style="background-color: black"></td>
+					<td style="background-color: #D51148"></td>
+					<td style="background-color: #08043E"></td>
+					<td style="background-color: #BA0E0E"></td>
+					<td style="background-color: #0A0A66"></td>
+					<td style="background-color: #CAC5C5"></td>
+				</tr>
+			</table>
+
+			<table class="descripcion">
+				<caption>Descripción</caption>
+				<tr>
+					<td>Mayon de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="detalles_mallon3" class="detalles">
+		<img src="imagenes/mallon_liso_t.jpg" class="principal">
+		
+		<div class="miniaturas">
+			<img src="imagenes/mallon_liso_t.jpg" class="trasero">
+			<img src="imagenes/mallon_liso_d.jpg" class="delantero">
+		</div>
+
+		<div class="informacion_prenda">
+			<span class="titulo">Mallón Liso</span>
+			<table class="tallas">
+				<caption>Tallas</caption>
+				<tr>
+					<td>Ch</td>
+					<td>M</td>
+					<td>G</td>
+					<td>Ex</td>
+				</tr>
+			</table>
+
+			<table class="colores">
+				<caption>Colores</caption>
+				<tr>
+					<td style="background-color: #07480F"> </td>
+					<td style="background-color: #9E1F37"></td>
+					<td style="background-color: black"></td>
+					<td style="background-color: #D51148"></td>
+					<td style="background-color: #08043E"></td>
+					<td style="background-color: #BA0E0E"></td>
+					<td style="background-color: #0A0A66"></td>
+					<td style="background-color: #CAC5C5"></td>
+				</tr>
+			</table>
+
+			<table class="descripcion">
+				<caption>Descripción</caption>
+				<tr>
+					<td>Mayon de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="detalles_mallon4" class="detalles">
+		<img src="imagenes/mallon_recto_t.jpg" class="principal">
+		
+		<div class="miniaturas">
+			<img src="imagenes/mallon_recto_t.jpg" class="trasero">
+			<img src="imagenes/mallon_recto_d.jpg" class="delantero">
+		</div>
+
+		<div class="informacion_prenda">
+			<span class="titulo">Pantalón de Licra con Bolsas al Costado</span>
+			<table class="tallas">
+				<caption>Tallas</caption>
+				<tr>
+					<td>Ch</td>
+					<td>M</td>
+					<td>G</td>
+					<td>Ex</td>
+				</tr>
+			</table>
+
+			<table class="colores">
+				<caption>Colores</caption>
+				<tr>
+					<td style="background-color: #07480F"> </td>
+					<td style="background-color: #9E1F37"></td>
+					<td style="background-color: black"></td>
+					<td style="background-color: #D51148"></td>
+					<td style="background-color: #08043E"></td>
+					<td style="background-color: #BA0E0E"></td>
+					<td style="background-color: #0A0A66"></td>
+					<td style="background-color: #CAC5C5"></td>
+				</tr>
+			</table>
+
+			<table class="descripcion">
+				<caption>Descripción</caption>
+				<tr>
+					<td>Mayon de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="detalles_mallon5" class="detalles">
+		<img src="imagenes/mallon_cartera_t.jpg" class="principal">
+		
+		<div class="miniaturas">
+			<img src="imagenes/mallon_cartera_t.jpg" class="trasero">
+			<img src="imagenes/mallon_cartera_d.jpg" class="delantero">
+		</div>
+
+		<div class="informacion_prenda">
+			<span class="titulo">Mallón Con Bolsa de Cartera</span>
+			<table class="tallas">
+				<caption>Tallas</caption>
+				<tr>
+					<td>Ch</td>
+					<td>M</td>
+					<td>G</td>
+					<td>Ex</td>
+				</tr>
+			</table>
+
+			<table class="colores">
+				<caption>Colores</caption>
+				<tr>
+					<td style="background-color: #07480F"> </td>
+					<td style="background-color: #9E1F37"></td>
+					<td style="background-color: black"></td>
+					<td style="background-color: #D51148"></td>
+					<td style="background-color: #08043E"></td>
+					<td style="background-color: #BA0E0E"></td>
+					<td style="background-color: #0A0A66"></td>
+					<td style="background-color: #CAC5C5"></td>
+				</tr>
+			</table>
+
+			<table class="descripcion">
+				<caption>Descripción</caption>
+				<tr>
+					<td>Mayon de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="detalles_mallon6" class="detalles">
+		<img src="imagenes/capri_t.jpg" class="principal">
+		
+		<div class="miniaturas">
+			<img src="imagenes/capri_t.jpg" class="trasero">
+			<img src="imagenes/capri_d.jpg" class="delantero">
+		</div>
+
+		<div class="informacion_prenda">
+			<span class="titulo">Capri de Licra</span>
+			<table class="tallas">
+				<caption>Tallas</caption>
+				<tr>
+					<td>Ch</td>
+					<td>M</td>
+					<td>G</td>
+					<td>Ex</td>
+				</tr>
+			</table>
+
+			<table class="colores">
+				<caption>Colores</caption>
+				<tr>
+					<td style="background-color: #07480F"> </td>
+					<td style="background-color: #9E1F37"></td>
+					<td style="background-color: black"></td>
+					<td style="background-color: #D51148"></td>
+					<td style="background-color: #08043E"></td>
+					<td style="background-color: #BA0E0E"></td>
+					<td style="background-color: #0A0A66"></td>
+					<td style="background-color: #CAC5C5"></td>
+				</tr>
+			</table>
+
+			<table class="descripcion">
+				<caption>Descripción</caption>
+				<tr>
+					<td>Mayon de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="detalles_sudadera1" class="detalles">
+		<img src="imagenes/sudadera_doble_d.jpg" class="principal">
+		
+		<div class="miniaturas">
+			<img src="imagenes/sudadera_doble_d.jpg" class="trasero">
+			<img src="imagenes/sudadera_doble_t.jpg" class="delantero">
+		</div>
+
+		<div class="informacion_prenda">
+			<span class="titulo">Chamarra Simulación Doble Cierre</span>
+			<table class="tallas">
+				<caption>Tallas</caption>
+				<tr>
+					<td>Ch</td>
+					<td>M</td>
+					<td>G</td>
+					<td>Ex</td>
+				</tr>
+			</table>
+
+			<table class="colores">
+				<caption>Colores</caption>
+				<tr>
+					<td style="background-color: #07480F"> </td>
+					<td style="background-color: #9E1F37"></td>
+					<td style="background-color: black"></td>
+					<td style="background-color: #D51148"></td>
+					<td style="background-color: #08043E"></td>
+					<td style="background-color: #BA0E0E"></td>
+					<td style="background-color: #0A0A66"></td>
+					<td style="background-color: #CAC5C5"></td>
+				</tr>
+			</table>
+
+			<table class="descripcion">
+				<caption>Descripción</caption>
+				<tr>
+					<td>Mayon de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="detalles_sudadera2" class="detalles">
+		<img src="imagenes/sudadera_corta_d.jpg" class="principal">
+		
+		<div class="miniaturas">
+			<img src="imagenes/sudadera_corta_d.jpg" class="trasero">
+			<img src="imagenes/sudadera_corta_t.jpg" class="delantero">
+		</div>
+
+		<div class="informacion_prenda">
+			<span class="titulo">Chamarra Simulación Doble Cierre</span>
+			<table class="tallas">
+				<caption>Tallas</caption>
+				<tr>
+					<td>Ch</td>
+					<td>M</td>
+					<td>G</td>
+					<td>Ex</td>
+				</tr>
+			</table>
+
+			<table class="colores">
+				<caption>Colores</caption>
+				<tr>
+					<td style="background-color: #07480F"> </td>
+					<td style="background-color: #9E1F37"></td>
+					<td style="background-color: black"></td>
+					<td style="background-color: #D51148"></td>
+					<td style="background-color: #08043E"></td>
+					<td style="background-color: #BA0E0E"></td>
+					<td style="background-color: #0A0A66"></td>
+					<td style="background-color: #CAC5C5"></td>
+				</tr>
+			</table>
+
+			<table class="descripcion">
+				<caption>Descripción</caption>
+				<tr>
+					<td>Mayon de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="detalles_sudadera3" class="detalles">
+		<img src="imagenes/sudadera_cazadora_d.jpg" class="principal">
+		
+		<div class="miniaturas">
+			<img src="imagenes/sudadera_cazadora_d.jpg" class="trasero">
+			<img src="imagenes/sudadera_cazadora_t.jpg" class="delantero">
+		</div>
+
+		<div class="informacion_prenda">
+			<span class="titulo">Sudadera tipo cazadora</span>
+			<table class="tallas">
+				<caption>Tallas</caption>
+				<tr>
+					<td>Ch</td>
+					<td>M</td>
+					<td>G</td>
+					<td>Ex</td>
+				</tr>
+			</table>
+
+			<table class="colores">
+				<caption>Colores</caption>
+				<tr>
+					<td style="background-color: #07480F"> </td>
+					<td style="background-color: #9E1F37"></td>
+					<td style="background-color: black"></td>
+					<td style="background-color: #D51148"></td>
+					<td style="background-color: #08043E"></td>
+					<td style="background-color: #BA0E0E"></td>
+					<td style="background-color: #0A0A66"></td>
+					<td style="background-color: #CAC5C5"></td>
+				</tr>
+			</table>
+
+			<table class="descripcion">
+				<caption>Descripción</caption>
+				<tr>
+					<td>Mayon de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="detalles_sudadera4" class="detalles">
+		<img src="imagenes/sudadera_beisbolera_d.jpg" class="principal">
+		
+		<div class="miniaturas">
+			<img src="imagenes/sudadera_beisbolera_d.jpg" class="trasero">
+			<img src="imagenes/sudadera_beisbolera_t.jpg" class="delantero">
+		</div>
+
+		<div class="informacion_prenda">
+			<span class="titulo">Sudadera tipo beisbolera</span>
+			<table class="tallas">
+				<caption>Tallas</caption>
+				<tr>
+					<td>Ch</td>
+					<td>M</td>
+					<td>G</td>
+					<td>Ex</td>
+				</tr>
+			</table>
+
+			<table class="colores">
+				<caption>Colores</caption>
+				<tr>
+					<td style="background-color: #07480F"> </td>
+					<td style="background-color: #9E1F37"></td>
+					<td style="background-color: black"></td>
+					<td style="background-color: #D51148"></td>
+					<td style="background-color: #08043E"></td>
+					<td style="background-color: #BA0E0E"></td>
+					<td style="background-color: #0A0A66"></td>
+					<td style="background-color: #CAC5C5"></td>
+				</tr>
+			</table>
+
+			<table class="descripcion">
+				<caption>Descripción</caption>
+				<tr>
+					<td>Mayon de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="detalles_conjunto1" class="detalles">
+		<img src="imagenes/conjunto_bies_d.jpg" class="principal">
+		
+		<div class="miniaturas">
+			<img src="imagenes/conjunto_bies_d.jpg" class="trasero">
+			<img src="imagenes/conjunto_bies_t.jpg" class="delantero">
+		</div>
+
+		<div class="informacion_prenda">
+			<span class="titulo">Conjunto Con Bies en Chamarra</span>
+			<table class="tallas">
+				<caption>Tallas</caption>
+				<tr>
+					<td>Ch</td>
+					<td>M</td>
+					<td>G</td>
+					<td>Ex</td>
+				</tr>
+			</table>
+
+			<table class="colores">
+				<caption>Colores</caption>
+				<tr>
+					<td style="background-color: #07480F"> </td>
+					<td style="background-color: #9E1F37"></td>
+					<td style="background-color: black"></td>
+					<td style="background-color: #D51148"></td>
+					<td style="background-color: #08043E"></td>
+					<td style="background-color: #BA0E0E"></td>
+					<td style="background-color: #0A0A66"></td>
+					<td style="background-color: #CAC5C5"></td>
+				</tr>
+			</table>
+
+			<table class="descripcion">
+				<caption>Descripción</caption>
+				<tr>
+					<td>Mayon de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	<div id="detalles_conjunto2" class="detalles">
+		<img src="imagenes/conjunto_doble_d.jpg" class="principal">
+		
+		<div class="miniaturas">
+			<img src="imagenes/conjunto_doble_d.jpg" class="trasero">
+			<img src="imagenes/conjunto_doble_t.jpg" class="delantero">
+		</div>
+
+		<div class="informacion_prenda">
+			<span class="titulo">Conjunto Con Chamarra Simulación Doble</span>
+			<table class="tallas">
+				<caption>Tallas</caption>
+				<tr>
+					<td>Ch</td>
+					<td>M</td>
+					<td>G</td>
+					<td>Ex</td>
+				</tr>
+			</table>
+
+			<table class="colores">
+				<caption>Colores</caption>
+				<tr>
+					<td style="background-color: #07480F"> </td>
+					<td style="background-color: #9E1F37"></td>
+					<td style="background-color: black"></td>
+					<td style="background-color: #D51148"></td>
+					<td style="background-color: #08043E"></td>
+					<td style="background-color: #BA0E0E"></td>
+					<td style="background-color: #0A0A66"></td>
+					<td style="background-color: #CAC5C5"></td>
+				</tr>
+			</table>
+
+			<table class="descripcion">
+				<caption>Descripción</caption>
+				<tr>
+					<td>Mayon de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="detalles_conjunto3" class="detalles">
+		<img src="imagenes/conjunto_capri1_d.jpg" class="principal">
+		
+		<div class="miniaturas">
+			<img src="imagenes/conjunto_capri1_d.jpg" class="trasero">
+			<img src="imagenes/conjunto_capri1_t.jpg" class="delantero">
+		</div>
+
+		<div class="informacion_prenda">
+			<span class="titulo">Conjunto de Capri</span>
+			<table class="tallas">
+				<caption>Tallas</caption>
+				<tr>
+					<td>Ch</td>
+					<td>M</td>
+					<td>G</td>
+					<td>Ex</td>
+				</tr>
+			</table>
+
+			<table class="colores">
+				<caption>Colores</caption>
+				<tr>
+					<td style="background-color: #07480F"> </td>
+					<td style="background-color: #9E1F37"></td>
+					<td style="background-color: black"></td>
+					<td style="background-color: #D51148"></td>
+					<td style="background-color: #08043E"></td>
+					<td style="background-color: #BA0E0E"></td>
+					<td style="background-color: #0A0A66"></td>
+					<td style="background-color: #CAC5C5"></td>
+				</tr>
+			</table>
+
+			<table class="descripcion">
+				<caption>Descripción</caption>
+				<tr>
+					<td>Mayon de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="detalles_conjunto4" class="detalles">
+		<img src="imagenes/conjunto_capri2_d.jpg" class="principal">
+		
+		<div class="miniaturas">
+			<img src="imagenes/conjunto_capri2_d.jpg" class="trasero">
+			<img src="imagenes/conjunto_capri2_t.jpg" class="delantero">
+		</div>
+
+		<div class="informacion_prenda">
+			<span class="titulo">Conjunto de Capri</span>
+			<table class="tallas">
+				<caption>Tallas</caption>
+				<tr>
+					<td>Ch</td>
+					<td>M</td>
+					<td>G</td>
+					<td>Ex</td>
+				</tr>
+			</table>
+
+			<table class="colores">
+				<caption>Colores</caption>
+				<tr>
+					<td style="background-color: #07480F"> </td>
+					<td style="background-color: #9E1F37"></td>
+					<td style="background-color: black"></td>
+					<td style="background-color: #D51148"></td>
+					<td style="background-color: #08043E"></td>
+					<td style="background-color: #BA0E0E"></td>
+					<td style="background-color: #0A0A66"></td>
+					<td style="background-color: #CAC5C5"></td>
+				</tr>
+			</table>
+
+			<table class="descripcion">
+				<caption>Descripción</caption>
+				<tr>
+					<td>Mayon de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="detalles_conjunto5" class="detalles">
+		<img src="imagenes/conjunto_short_d.jpg" class="principal">
+		
+		<div class="miniaturas">
+			<img src="imagenes/conjunto_short_d.jpg" class="trasero">
+			<img src="imagenes/conjunto_short_t.jpg" class="delantero">
+		</div>
+
+		<div class="informacion_prenda">
+			<span class="titulo">Conjunto de Short</span>
+			<table class="tallas">
+				<caption>Tallas</caption>
+				<tr>
+					<td>Ch</td>
+					<td>M</td>
+					<td>G</td>
+					<td>Ex</td>
+				</tr>
+			</table>
+
+			<table class="colores">
+				<caption>Colores</caption>
+				<tr>
+					<td style="background-color: #07480F"> </td>
+					<td style="background-color: #9E1F37"></td>
+					<td style="background-color: black"></td>
+					<td style="background-color: #D51148"></td>
+					<td style="background-color: #08043E"></td>
+					<td style="background-color: #BA0E0E"></td>
+					<td style="background-color: #0A0A66"></td>
+					<td style="background-color: #CAC5C5"></td>
+				</tr>
+			</table>
+
+			<table class="descripcion">
+				<caption>Descripción</caption>
+				<tr>
+					<td>Mayon de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+
+
+
+	<div id="presentacion">
+		Casar Sport® <address>Hidalgo 42, San Pedro, 56270 Chiconcuac, Méx.</address>
+	</div>
+
+
+
+</body>
+</html>

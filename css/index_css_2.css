@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+body{
+	width: 100%;
+	margin: 0px;
+    font-family: Garamond;
+}
+/*-------------------Encabezado------*/
+
+header{
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	z-index: 1;
+	color: white;
+	background: linear-gradient(to right, #AD1B67 10%,#B3406B 80%);
+
+	box-shadow: 0px 10px 10px black;
+}
+header #redes{
+	float: left;
+	width: 200px;
+	margin-left: 30px;
+}
+header img{
+	width: 45px;
+	height: 45px;
+	margin:15px 10px;
+	border-radius: 20px;
+}
+
+
+/*-------------LOGO-------*/
+
+#logo{
+	width: 100%;
+	height: 350px;
+	margin: auto;
+	background: url("../imagenes/logo.jpg") white no-repeat bottom;
+}
+
+/*----------------------ROPA------*/
+#ropa{
+	width: 100%;
+	height: 550px;
+	background: url('../imagenes/contenedor_ropa.jpg') repeat-x center; 
+}
+
+#ropa .descripcion{
+	width: 100%;
+	height: 550px;
+
+
+	color: white;
+	font-size: 1.6em;
+	background: #F490AC;
+	opacity: .8;
+}
+
+#ropa .texto{
+	width: 45%;
+
+	padding: 100px;
+	text-align: justify;
+
+}
+
+button{
+	width: 120px;
+	position: relative;
+	top: 20px;
+	left: 250px;
+
+	background: #E66A6A;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	padding: 10px;
+
+
+    font-family: Garamond;
+	font-size: 0.9em;
+	font-style: italic;
+	opacity: 0.8;
+}
+
+/*--------------UBICACIOM----*/
+#ubicacion{
+	width: 40%;
+	height: 550px;
+	float: left;
+	background: url('../imagenes/contenedor_ropa.jpg') repeat-x center; 
+}
+
+#ubicacion .descripcion{
+	width: 100%;
+	height: 550px;
+	margin-top: -25px;
+	color: white;
+	font-size: 1.4em;
+	background: #8CB0E2;
+	opacity: .95;
+}
+
+#ubicacion .texto{
+	width: 70%;	
+	padding: 70px;
+	text-align: center;
+
+}
+
+#mapa{
+	width: 150px;
+
+}
+
+#mapa:hover{
+	cursor: pointer;
+}
+
+
+input:hover, button:hover{
+	cursor: pointer;
+	opacity: 1;
+	transform: scale(1.1);
+
+}
+
+/*----------------------CONTACTO------*/
+#contacto{
+	width: 60%;
+	height: 550px;
+	float: right;
+	background: url('../imagenes/contenedor_contacto.jpg') repeat-x; 
+	font-size: 1.5em;
+	text-align: center;
+	color: white;
+
+}
+
+.email{
+	width: 70%;
+	height: 450px;
+
+	background: #111111;
+	margin: 10px auto;
+	color: white;
+	opacity: 0.8;
+}
+.email:hover{
+	opacity: 1;
+}
+
+#contacto table{
+	width: 80%;
+	padding: 30px 80px;
+}
+
+td{
+	padding: 15px 0px;
+}
+
+#contacto input{
+	border-radius: 5px;
+	width: 200px;
+}
+
+#asunto{
+	height: 180px;
+	border-radius: 5px;
+	width: 200px;
+}
+
+#enviar{
+	width: 100px;
+}
+
+/* MAPA EXPANDIDO*/
+#mapa_expandido{
+	width: 700px;
+	height: 700px;
+	z-index: 2;
+	position: fixed;
+	top: 100px;
+	left: 150px;
+}
+
+#mapa_expandido img{
+	width: 100%;
+}
