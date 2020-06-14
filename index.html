@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Casar Sport</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/index_css_2.css">
+
+
+	<script src="js/jquery.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#mapa").click(expandir_mapa);
+
+			$("#mapa_expandido").hide();
+			$("html").click(function() {
+				$("#mapa_expandido").fadeOut();
+				$("header").fadeIn(1000);
+				$("#ropa").css({
+					opacity : 1
+				});
+				$("#ubicacion").css({
+					opacity : 1
+				});
+				$("#contacto").css({
+					opacity : 1
+				});
+			});	
+
+
+		
+		});
+
+		function expandir_mapa(e){
+			e.stopPropagation();
+			$("header").fadeOut(500);
+			$("#mapa_expandido").fadeIn(500);
+			$("#ropa").css({
+				opacity : 0.4
+			});
+			$("#ubicacion").css({
+				opacity : 0.4
+			});
+			$("#contacto").css({
+				opacity : 0.4
+			});
+		}
+
+
+
+	</script>
+</head>
+<body>
+	<header>
+		<div id="redes">
+			<a href="https://www.facebook.com/CASAR-SPORT-100139951706948"><img class="redes_sociales" src="imagenes/facebook.png"></a>
+			<a href="https://www.instagram.com/"><img class="redes_sociales" src="imagenes/instagram.png"></a>
+		</div>
+		
+	</header>
+
+	<div id="logo">
+
+	</div>
+
+	<div id="ropa">
+		<div class="descripcion">
+			<p class="texto">
+				<span style="font-size: 1.5em; font-style: italic;">Acerca de nostros...</span>
+				<br><br>
+				Casar Sport es una empresa distinguida por brindar productos de la mejor  calidad por más de 20 años.
+				<br><br>
+				Nuestras linea de producción esta enfocada  a la ropa deportiva de dama.
+				<br><br>
+				Contamos con una amplia variedad de artículos adecuados para todo tipo de situaciones.
+				<br>
+				<a href="ropa.html"><button>Catálogo</button></a>
+			
+			</p>
+		</div>
+	</div>
+
+
+	<div id="ubicacion">
+		<div class="descripcion">
+			<p class="texto">
+			Whatsapp: <br> 595-107-81-85<br><br>	
+			Correo: <br> casar.sport@gmail.com <br><br>
+			Dirección: <br>Hidalgo 42, San Pedro, 56270 Chiconcuac, Méx.<br><br>
+				<img src="imagenes/mapa.png" id="mapa">
+			</p>
+		</div>
+	</div>
+
+
+	<div id="contacto">
+		<br>
+		<span style="font-size: 1.5em; font-style: italic; padding: 20px">Escribenos</span>
+		<div class="email">
+			<form >
+				<table>
+					<tr>
+						<td><label for="nombre">Nombre: </label></td>
+						<td><input type="text" name="nombre" required="true"></td>
+					</tr>
+					<tr>
+						<td><label for="email">Email: </label> </td>
+						<td><input type="email" name="email" required="true"></td>
+					</tr>
+					<tr>
+						<td><label for="asunto">Asunto: </label></td>
+						<td><textarea name="asunto" id="asunto" required="true"></textarea></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type="submit" name="enviar" id="enviar" value="Enviar"></td>
+					</tr>
+					
+				</table>
+			</form>
+
+		</div>
+	</div>
+	
+	<div id="mapa_expandido">
+		<img src="imagenes/mapa.png" id="mapa">
+	</div>
+
+
+</body>
+</html>
