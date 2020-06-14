@@ -51,6 +51,122 @@
 
 						<button id="Bmallon5">Ver...</button>
 					</div>
+
+					<script type="text/javascript">
+						var botones=document.querySelectorAll("button");
+						for (var i =0;i<botones.length; i++) {
+							botones[i].addEventListener("click",ver_mas, false);
+						}
+
+						function ver_mas(e){
+
+							$("#contenido").hide();
+							$("header").css({
+								opacity : 0.9
+							});
+
+							e.stopPropagation();
+							$("#cerrar").show();
+							$("#detalles").show();
+
+							if (e.target==Bmallon1) {
+								$(".detalles .titulo").text('Mallón de Licra con Bolsas al Costado');
+								$(".detalles .des").text('Mallón de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales');
+								$(".detalles .principal").attr("src","imagenes/mallones/costado_uno.jpg");
+								$(".detalles .miniaturas .uno").attr("src", "imagenes/mallones/costado_uno.jpg");
+								$(".detalles .miniaturas .dos").attr("src","imagenes/mallones/costado_dos.jpg");
+								$(".detalles .miniaturas .tres").attr("src","imagenes/mallones/costado_tres.jpg");
+
+								$(".detalles .miniaturas .uno").click(function() {
+									$(".detalles .principal").attr("src","imagenes/mallones/costado_uno.jpg");
+								});
+
+								$(".detalles .miniaturas .dos").click(function() {
+									$(".detalles .principal").attr("src","imagenes/mallones/costado_dos.jpg");
+								});
+								$(".detalles .miniaturas .tres").click(function() {
+									$(".detalles .principal").attr("src","imagenes/mallones/costado_tres.jpg");
+								});
+
+							}	else if(e.target==Bmallon2) {
+								$(".detalles .titulo").text('Mallón de Licra con Simulación bolsa');
+								$(".detalles .des").text('Mallón de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales');
+								$(".detalles .principal").attr("src","imagenes/mallones/cartera_uno.jpg");
+								$(".detalles .miniaturas .uno").attr("src", "imagenes/mallones/cartera_uno.jpg");
+								$(".detalles .miniaturas .dos").attr("src","imagenes/mallones/cartera_dos.jpg");
+								$(".detalles .miniaturas .tres").attr("src","imagenes/mallones/cartera_tres.jpg");
+
+								$(".detalles .miniaturas .uno").click(function() {
+									$(".detalles .principal").attr("src","imagenes/mallones/cartera_uno.jpg");
+								});
+
+								$(".detalles .miniaturas .dos").click(function() {
+									$(".detalles .principal").attr("src","imagenes/mallones/cartera_dos.jpg");
+								});
+								$(".detalles .miniaturas .tres").click(function() {
+									$(".detalles .principal").attr("src","imagenes/mallones/cartera_tres.jpg");
+								});
+
+							}	else if(e.target==Bmallon3) {
+								$(".detalles .titulo").text('Mallón de French Terry');
+								$(".detalles .des").text('Mallón de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales');
+								$(".detalles .principal").attr("src","imagenes/mallones/french_uno.jpg");
+								$(".detalles .miniaturas .uno").attr("src", "imagenes/mallones/french_uno.jpg");
+								$(".detalles .miniaturas .dos").attr("src","imagenes/mallones/french_dos.jpg");
+								$(".detalles .miniaturas .tres").attr("src","imagenes/mallones/french_tres.jpg");
+
+								$(".detalles .miniaturas .uno").click(function() {
+									$(".detalles .principal").attr("src","imagenes/mallones/french_uno.jpg");
+								});
+
+								$(".detalles .miniaturas .dos").click(function() {
+									$(".detalles .principal").attr("src","imagenes/mallones/french_dos.jpg");
+								});
+								$(".detalles .miniaturas .tres").click(function() {
+									$(".detalles .principal").attr("src","imagenes/mallones/french_tres.jpg");
+								});
+
+							}	else if(e.target==Bmallon4) {
+								$(".detalles .titulo").text('Pantalón Recto bolsa enfrente');
+								$(".detalles .des").text('Mallón de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales');
+								$(".detalles .principal").attr("src","imagenes/mallones/recto_uno.jpg");
+								$(".detalles .miniaturas .uno").attr("src", "imagenes/mallones/recto_uno.jpg");
+								$(".detalles .miniaturas .dos").attr("src","imagenes/mallones/recto_dos.jpg");
+								$(".detalles .miniaturas .tres").attr("src","imagenes/mallones/recto_tres.jpg");
+
+								$(".detalles .miniaturas .uno").click(function() {
+									$(".detalles .principal").attr("src","imagenes/mallones/recto_uno.jpg");
+								});
+
+								$(".detalles .miniaturas .dos").click(function() {
+									$(".detalles .principal").attr("src","imagenes/mallones/recto_dos.jpg");
+								});
+								$(".detalles .miniaturas .tres").click(function() {
+									$(".detalles .principal").attr("src","imagenes/mallones/recto_tres.jpg");
+								});
+
+							}	else if(e.target==Bmallon5) {
+								$(".detalles .titulo").text('Pantalón Recto Bolsa atras');
+								$(".detalles .des").text('Mallón de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales');
+								$(".detalles .principal").attr("src","imagenes/mallones/atras_uno.jpg");
+								$(".detalles .miniaturas .uno").attr("src", "imagenes/mallones/atras_uno.jpg");
+								$(".detalles .miniaturas .dos").attr("src","imagenes/mallones/atras_dos.jpg");
+								$(".detalles .miniaturas .tres").attr("src","imagenes/mallones/atras_tres.jpg");
+
+								$(".detalles .miniaturas .uno").click(function() {
+									$(".detalles .principal").attr("src","imagenes/mallones/atras_uno.jpg");
+								});
+
+								$(".detalles .miniaturas .dos").click(function() {
+									$(".detalles .principal").attr("src","imagenes/mallones/atras_dos.jpg");
+								});
+								$(".detalles .miniaturas .tres").click(function() {
+									$(".detalles .principal").attr("src","imagenes/mallones/atras_tres.jpg");
+								});
+
+							}
+					}
+					</script>
 			</div>
 
 </body>
