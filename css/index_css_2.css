@@ -52,15 +52,15 @@ header img{
 
 
 	color: white;
-	font-size: 1.6em;
+	font-size: 1.4em;
 	background: #F490AC;
 	opacity: .8;
 }
 
 #ropa .texto{
-	width: 45%;
+	width: 60%;
 
-	padding: 100px;
+	padding: 50px 70px;
 	text-align: justify;
 
 }
@@ -68,8 +68,8 @@ header img{
 button{
 	width: 120px;
 	position: relative;
-	top: 20px;
-	left: 250px;
+	top: 50px;
+	left: 190px;
 
 	background: #E66A6A;
 	color: white;

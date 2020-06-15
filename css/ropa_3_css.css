@@ -268,7 +268,7 @@ button{
 .tallas{
 	width: 400px;
 	position: relative;
-	top: 70px;
+	top: 50px;
 	left: 25px;
 	text-align: center;
 	font-size: 1.2em;
@@ -283,7 +283,7 @@ button{
 .colores{
 	width: 400px;
 	position: relative;
-	top: 110px;
+	top: 70px;
 	left: 25px;
 	text-align: center;
 	font-size: 1.2em;
@@ -297,11 +297,19 @@ button{
 .descripcion{
 	width: 400px;
 	position: relative;
-	top: 160px;
+	top: 100px;
 	left: 25px;
 	text-align: justify;
 	font-size: 1.2em;
 	padding: 10px;
+}
+.descripcion ul{
+	margin: -15px -30px;
+}
+
+.descripcion li{
+	list-style: circle;
+	display: inherit;
 }
 
 /*------------PIE DE PAGINA----*/
