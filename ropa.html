@@ -43,6 +43,7 @@
 			$("#prendas_sudaderas").hide();
 			$("#prendas_conjuntos").hide();
 			$("#prendas_caballeros").hide();
+			$("#trabajando").hide();
 
 			var opciones=document.querySelectorAll("li");
 			for (var i =0 ;  i<opciones.length; i++) {
@@ -57,24 +58,28 @@
 				$("#prendas_sudaderas").hide();
 				$("#prendas_conjuntos").hide();
 				$("#prendas_caballeros").hide();
+				$("#trabajando").hide();
 
 			}else if (e.target==sudaderas) {
+				$("#trabajando").show();
 				$("#prendas_mallones").hide();
-				$("#prendas_sudaderas").show();
+				$("#prendas_sudaderas").hide();
 				$("#prendas_conjuntos").hide();
 				$("#prendas_caballeros").hide();
 
 			}else if (e.target==conjuntos) {
-				$("#prendas_mallones").hide();
-				$("#prendas_sudaderas").hide();
-				$("#prendas_conjuntos").show();
-				$("#prendas_caballeros").hide();
-
-			}else if (e.target==caballeros) {
+				$("#trabajando").show();
 				$("#prendas_mallones").hide();
 				$("#prendas_sudaderas").hide();
 				$("#prendas_conjuntos").hide();
-				$("#prendas_caballeros").show();
+				$("#prendas_caballeros").hide();
+
+			}else if (e.target==caballeros) {
+				$("#trabajando").show();
+				$("#prendas_mallones").hide();
+				$("#prendas_sudaderas").hide();
+				$("#prendas_conjuntos").hide();
+				$("#prendas_caballeros").hide();
 			}
 		}
 
@@ -88,10 +93,18 @@
 			e.stopPropagation();
 			$("#cerrar").show();
 			$("#detalles").show();
+			$("#color1").attr("style", "background: #457331");
+			$("#color2").attr("style", "background: #9E1F37");
+			$("#color3").attr("style", "background: #000000");
+			$("#color4").attr("style", "background: #D51148");
+			$("#color5").attr("style", "background: #08043E");
+			$("#color6").attr("style", "background: #BA0E0E");
+			$("#color7").attr("style", "background: #0A0A66");
+			$("#color8").attr("style", "background: #CAC5C5");
 
 			if (e.target==Bmallon1) {
-				$(".detalles .titulo").text('Mallón de Licra con Bolsas al Costado');
-				$(".detalles .des").text('Mallón de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales');
+				$(".detalles .titulo").text('Leggins 1320');
+				$(".detalles .des").html("<ul><li>Costura reforzada con puente en la entrepierna.</li><li> Practica bolsa al costado.</li><li> Pretina ancha con resorte interior para mejor ajuste</li><li>Prenda versatil; gimnasio/oficina</li></ul>");
 				$(".detalles .principal").attr("src","imagenes/mallones/costado_uno.jpg");
 				$(".detalles .miniaturas .uno").attr("src", "imagenes/mallones/costado_uno.jpg");
 				$(".detalles .miniaturas .dos").attr("src","imagenes/mallones/costado_dos.jpg");
@@ -109,8 +122,8 @@
 				});
 
 			}	else if(e.target==Bmallon2) {
-				$(".detalles .titulo").text('Mallón de Licra con Simulación bolsa');
-				$(".detalles .des").text('Mallón de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales');
+				$(".detalles .titulo").text('Leggin 1109');
+				$(".detalles .des").html("<ul><li>Costura reforzada con puente en la entrepierna.</li><li> Bolsa simulada tipo cartera. </li><li>  Pretina ancha con resorte interior para mejor ajuste</li><li> Prenda versatil; gimnasio/oficina</li></ul>");
 				$(".detalles .principal").attr("src","imagenes/mallones/cartera_uno.jpg");
 				$(".detalles .miniaturas .uno").attr("src", "imagenes/mallones/cartera_uno.jpg");
 				$(".detalles .miniaturas .dos").attr("src","imagenes/mallones/cartera_dos.jpg");
@@ -128,12 +141,20 @@
 				});
 
 			}	else if(e.target==Bmallon3) {
-				$(".detalles .titulo").text('Mallón de French Terry');
-				$(".detalles .des").text('Mallón de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales');
+				$(".detalles .titulo").text('Pants tipo Jogger');
+				$(".detalles .des").html('<ul><li>Algodón-elastano. </li><li>Corte a la cintura con puño en el tobillo. </li><li>Comodo y fresco, libertad de movimiento</li></ul>');
 				$(".detalles .principal").attr("src","imagenes/mallones/french_uno.jpg");
 				$(".detalles .miniaturas .uno").attr("src", "imagenes/mallones/french_uno.jpg");
 				$(".detalles .miniaturas .dos").attr("src","imagenes/mallones/french_dos.jpg");
 				$(".detalles .miniaturas .tres").attr("src","imagenes/mallones/french_tres.jpg");
+					$("#color1").attr("style", "background: url('imagenes/colores_french/blanco.jpg')");
+					$("#color2").attr("style", "background: url('imagenes/colores_french/rosa.jpg')");
+					$("#color3").attr("style", "background: url('imagenes/colores_french/vino.jpg')");
+					$("#color4").attr("style", "background: url('imagenes/colores_french/cielo.jpg')");
+					$("#color5").attr("style", "background: url('imagenes/colores_french/maquillaje.jpg')");
+					$("#color6").attr("style", "background: url('imagenes/colores_french/hueso.jpg')");
+					$("#color7").attr("style", "background: url('imagenes/colores_french/verde.jpg')");
+					$("#color8").attr("style", "background: url('imagenes/colores_french/gris.jpg')");
 
 				$(".detalles .miniaturas .uno").click(function() {
 					$(".detalles .principal").attr("src","imagenes/mallones/french_uno.jpg");
@@ -147,8 +168,8 @@
 				});
 
 			}	else if(e.target==Bmallon4) {
-				$(".detalles .titulo").text('Pantalón Recto bolsa enfrente');
-				$(".detalles .des").text('Mallón de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales');
+				$(".detalles .titulo").text('Pantalón Bolsa Enfrente');
+				$(".detalles .des").html('<ul><li>Corte a la cintura. </li><li>Pretina ancha y cintas para un ajuste perfecto. </li><li>Bolsas amplias. </li><li>Prenda versatil; gimnasio/oficina</li></ul>');
 				$(".detalles .principal").attr("src","imagenes/mallones/recto_uno.jpg");
 				$(".detalles .miniaturas .uno").attr("src", "imagenes/mallones/recto_uno.jpg");
 				$(".detalles .miniaturas .dos").attr("src","imagenes/mallones/recto_dos.jpg");
@@ -166,8 +187,8 @@
 				});
 
 			}	else if(e.target==Bmallon5) {
-				$(".detalles .titulo").text('Pantalón Recto Bolsa atras');
-				$(".detalles .des").text('Mallón de licra ideal para realizar actividades fisicas o para ocaciones de eventos casuales');
+				$(".detalles .titulo").text('Pantalón/Pants recto');
+				$(".detalles .des").html('<ul><li>Con cintas para ajustar. </li><li>Puente en la entrepierna, ajuste perfecto máxima comodidad</li></ul>');
 				$(".detalles .principal").attr("src","imagenes/mallones/atras_uno.jpg");
 				$(".detalles .miniaturas .uno").attr("src", "imagenes/mallones/atras_uno.jpg");
 				$(".detalles .miniaturas .dos").attr("src","imagenes/mallones/atras_dos.jpg");
@@ -227,7 +248,7 @@
 				<div class="prenda">
 						<img src="imagenes/mallones/costado_uno.jpg">
 						<div id="descripcion">
-							Mallón con Bolsas al Costado
+							Leggins 1320
 						</div>
 
 						<button id="Bmallon1">Ver...</button>
@@ -236,7 +257,7 @@
 					<div class="prenda">
 							<img src="imagenes/mallones/cartera_uno.jpg">
 							<div id="descripcion">
-								Mallón con simulación de Bolsa
+								Leggins 1109
 							</div>
 						<button id="Bmallon2">Ver...</button>
 					</div>
@@ -244,7 +265,7 @@
 					<div class="prenda">
 						<img src="imagenes/mallones/french_dos.jpg">
 						<div id="descripcion">
-							Mallón Olgado
+							Pants tipo Jogger
 						</div>
 
 						<button id="Bmallon3">Ver...</button>
@@ -253,7 +274,7 @@
 					<div class="prenda">
 						<img src="imagenes/mallones/recto_uno.jpg">
 						<div id="descripcion">
-							Pantalón Recto Bolsa En Frente
+							Pantalón Bolsa Enfrente
 						</div>
 
 						<button id="Bmallon4">Ver...</button>
@@ -262,7 +283,7 @@
 					<div class="prenda">
 						<img src="imagenes/mallones/atras_uno.jpg">
 						<div id="descripcion">
-							Pantalón Recto Bolsa Atrás
+							Pantalón/Pants recto
 						</div>
 
 						<button id="Bmallon5">Ver...</button>
@@ -271,81 +292,18 @@
 
 		</div>
 
+		<div id="trabajando">
+			<center>
+				<img src="imagenes/trabajando.png" style="margin: 100px; border-radius: 50px">
+			</center>
+			
+		</div>
+
 		<div id="prendas_sudaderas" class="categoria">
-			<div class="prenda">
-				<img src="imagenes/sudadera_doble_d.jpg">
-				<div id="descripcion">
-					Chamarra Simulación Doble Cierre
-				</div>
-				<button id="Bsudadera1">Ver...</button>
-			</div>
-
-			<div class="prenda">
-				<img src="imagenes/sudadera_corta_t.jpg">
-				<div id="descripcion">
-					Sudadera Corta de Felpa
-				</div>
-				<button id="Bsudadera2">Ver...</button>
-			</div>
-
-			<div class="prenda">
-				<img src="imagenes/sudadera_cazadora_d.jpg">
-				<div id="descripcion">
-					Sudadera Tipo Cazadora
-				</div>
-				<button id="Bsudadera3">Ver...</button>
-			</div>
-
-			<div class="prenda">
-				<img src="imagenes/sudadera_beisbolera_d.jpg">
-				<div id="descripcion">
-					Sudadera Beisbolera
-				</div>
-				<button id="Bsudadera4">Ver...</button>
-			</div>
+			
 		</div>
 
 		<div id="prendas_conjuntos" class="categoria">
-			<div class="prenda">
-				<img src="imagenes/conjunto_bies_t.jpg">
-				<div id="descripcion">
-					Conjunto de Bies
-				</div>
-				<button id="Bconjunto1">Ver...</button>
-			</div>
-
-			<div class="prenda">
-				<img src="imagenes/conjunto_doble_t.jpg">
-				<div id="descripcion">
-					Conjunto Simulación Doble Cierra
-				</div>
-				<button id="Bconjunto2">Ver...</button>
-			</div>
-
-			<div class="prenda">
-				<img src="imagenes/conjunto_capri1_t.jpg">
-				<div id="descripcion">
-					Conjunto De Capri
-				</div>
-				<button id="Bconjunto3">Ver...</button>
-			</div>
-			
-			<div class="prenda">
-				<img src="imagenes/conjunto_capri2_t.jpg">
-				<div id="descripcion">
-					Conjunto De Capri
-				</div>
-				<button id="Bconjunto4">Ver...</button>
-			</div>
-
-
-			<div class="prenda">
-				<img src="imagenes/conjunto_short_t.jpg">
-				<div id="descripcion">
-					Conjunto De Short
-				</div>
-				<button id="Bconjunto5">Ver...</button>
-			</div>
 		</div>
 
 		<div id="prendas_caballeros" class="categoria">
@@ -360,7 +318,7 @@
 	</div>
 
 	<div id="detalles" class="detalles">
-		<img src="imagenes/mallon_costado_t.jpg" class="principal">
+		<img src="imagenes/mallones/costado_uno.jpg" class="principal">
 		
 		<div class="miniaturas">
 			<img src="" class="uno">
@@ -383,14 +341,14 @@
 			<table class="colores">
 				<caption>Colores</caption>
 				<tr>
-					<td style="background-color: #07480F"> </td>
-					<td style="background-color: #9E1F37"></td>
-					<td style="background-color: black"></td>
-					<td style="background-color: #D51148"></td>
-					<td style="background-color: #08043E"></td>
-					<td style="background-color: #BA0E0E"></td>
-					<td style="background-color: #0A0A66"></td>
-					<td style="background-color: #CAC5C5"></td>
+					<td id="color1" > </td>
+					<td id="color2"></td>
+					<td id="color3"></td>
+					<td id="color4"></td>
+					<td id="color5"></td>
+					<td id="color6"></td>
+					<td id="color7"></td>
+					<td id="color8"></td>
 				</tr>
 			</table>
 
